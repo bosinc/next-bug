@@ -1,5 +1,5 @@
 "use client";
-import { Button, Stack, Typography } from "@mui/material";
+import { Box, Button, Stack, Typography } from "@mui/material";
 import LinkButton from "../components/LinkButton";
 import { useRouter } from "next/navigation";
 import { useTranslations } from "next-intl";
@@ -14,7 +14,12 @@ export default function Home() {
       </Typography>
       <LinkButton href="/a">Page a</LinkButton>
       <LinkButton onClick={() => router.push(`/any/p/id`)}>
-        Page any ( Clicking on the page will force a refresh of the bug )
+        <Stack>
+          <Box>Page any</Box>
+          <Typography sx={{ color: "red" }} variant="body2">
+            ( Clicking on the page will force a refresh of the bug )
+          </Typography>
+        </Stack>
       </LinkButton>
     </Stack>
   );
