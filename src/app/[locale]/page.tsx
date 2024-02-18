@@ -13,7 +13,9 @@ export default function Home() {
         {t("Welcome")}
       </Typography>
       <LinkButton href="/a">Page a</LinkButton>
-      <LinkButton onClick={() => router.push(`/any/p/id`)}>Page any</LinkButton>
+      <LinkButton onClick={() => router.push(`/any/p/id`)}>
+        Page any ( Clicking on the page will force a refresh of the bug )
+      </LinkButton>
     </Stack>
   );
 }
