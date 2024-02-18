@@ -1,5 +1,5 @@
 import ModalPage from "@/app/components/ModalPage";
-import PageA from "@/app/a/page";
+import PageA from "@/app/[locale]/a/page";
 
 export default function ModalPageA() {
   return (
